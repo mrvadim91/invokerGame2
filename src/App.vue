@@ -2,6 +2,7 @@
 import spells from './components/spells.vue'
 import controlls from './components/controlls.vue'
 import mainGame from './components/mainGame.vue'
+
 </script>
 
 <template>
