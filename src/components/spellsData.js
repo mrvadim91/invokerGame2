@@ -1,7 +1,7 @@
 export const spellsData = [
     {
         name: "Cold Snap",
-        imgUrl: "./src/assets/spells/cold snap.png",
+        imgUrl: "https://i.imgur.com/ybyy7Nc.png",
         colbs: {
             quas: 3,
             wex: 0,
@@ -10,7 +10,7 @@ export const spellsData = [
     },
     {
         name: "Ghost Walk",
-        imgUrl: "./src/assets/spells/ghos walk.png",
+        imgUrl: "https://i.imgur.com/7OrGjum.png",
         colbs: {
             quas: 2,
             wex: 1,
@@ -19,7 +19,7 @@ export const spellsData = [
     },
     {
         name: "Ice Wall",
-        imgUrl: "./src/assets/spells/ice wall.png",
+        imgUrl: "https://i.imgur.com/86LdpGf.png",
         colbs: {
             quas: 2,
             wex: 0,
@@ -28,7 +28,7 @@ export const spellsData = [
     },
     {
         name: "EMP",
-        imgUrl: "./src/assets/spells/EMP.png",
+        imgUrl: "https://i.imgur.com/uKdTgNA.png",
         colbs: {
             quas: 0,
             wex: 3,
@@ -37,7 +37,7 @@ export const spellsData = [
     },
     {
         name: "Tornado",
-        imgUrl: "./src/assets/spells/tornado.png",
+        imgUrl: "https://i.imgur.com/i1KCylk.png",
         colbs: {
             quas: 1,
             wex: 2,
@@ -46,7 +46,7 @@ export const spellsData = [
     },
     {
         name: "Alacrity",
-        imgUrl: "./src/assets/spells/alacrity.png",
+        imgUrl: "https://i.imgur.com/XV6jrjn.png",
         colbs: {
             quas: 0,
             wex: 2,
@@ -55,7 +55,7 @@ export const spellsData = [
     },
     {
         name: "Sun Strike",
-        imgUrl: "./src/assets/spells/sun strike.png",
+        imgUrl: "https://i.imgur.com/BKfGS1j.png",
         colbs: {
             quas: 0,
             wex: 0,
@@ -64,7 +64,7 @@ export const spellsData = [
     },
     {
         name: "Forge Spirit",
-        imgUrl: "./src/assets/spells/forge spirit.png",
+        imgUrl: "https://i.imgur.com/NxuYJSS.png",
         colbs: {
             quas: 1,
             wex: 0,
@@ -73,7 +73,7 @@ export const spellsData = [
     },
     {
         name: "Chaos Meteor",
-        imgUrl: "./src/assets/spells/meteor.png",
+        imgUrl: "https://i.imgur.com/6ls7uCX.png",
         colbs: {
             quas: 0,
             wex: 1,
@@ -82,7 +82,7 @@ export const spellsData = [
     },
     {
         name: "Deafening Blast",
-        imgUrl: "./src/assets/spells/Deafening Blast.png",
+        imgUrl: "https://i.imgur.com/w2uWA7c.png",
         colbs: {
             quas: 1,
             wex: 1,

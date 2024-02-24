@@ -54,14 +54,14 @@ export default {
                 } else {
                     this.newRecord = false
                 }
-                if (userTime >= 25) { this.userRank = "src/assets/ranks/herald.png" }
-                if (userTime < 25 && userTime >= 20) { this.userRank = "src/assets/ranks/guardian.webp" }
-                if (userTime < 20 && userTime >= 15) { this.userRank = "src/assets/ranks/crusader.webp" }
-                if (userTime < 15 && userTime >= 10) { this.userRank = "src/assets/ranks/archon.webp" }
-                if (userTime < 10 && userTime >= 9) { this.userRank = "src/assets/ranks/legend.webp" }
-                if (userTime < 9 && userTime >= 8) { this.userRank = "src/assets/ranks/ancient.webp" }
-                if (userTime < 8 && userTime >= 7) { this.userRank = "src/assets/ranks/devine.webp" }
-                if (userTime < 7) { this.userRank = "src/assets/ranks/immortal.webp" }
+                if (userTime >= 25) { this.userRank = "https://i.imgur.com/05GjggD.png" }
+                if (userTime < 25 && userTime >= 20) { this.userRank = "https://raw.githubusercontent.com/mrvadim91/invokerGame2/main/src/assets/ranks/guardian.webp" }
+                if (userTime < 20 && userTime >= 15) { this.userRank = "https://raw.githubusercontent.com/mrvadim91/invokerGame2/main/src/assets/ranks/crusader.webp" }
+                if (userTime < 15 && userTime >= 10) { this.userRank = "https://raw.githubusercontent.com/mrvadim91/invokerGame2/main/src/assets/ranks/archon.webp" }
+                if (userTime < 10 && userTime >= 9) { this.userRank = "https://raw.githubusercontent.com/mrvadim91/invokerGame2/main/src/assets/ranks/legend.webp" }
+                if (userTime < 9 && userTime >= 8) { this.userRank = "https://raw.githubusercontent.com/mrvadim91/invokerGame2/main/src/assets/ranks/ancient.webp" }
+                if (userTime < 8 && userTime >= 7) { this.userRank = "https://raw.githubusercontent.com/mrvadim91/invokerGame2/main/src/assets/ranks/devine.webp" }
+                if (userTime < 7) { this.userRank = "https://raw.githubusercontent.com/mrvadim91/invokerGame2/main/src/assets/ranks/immortal.webp" }
             } 
             else {
                 const index = Math.floor(Math.random() * (this.spells.length - 1));
