@@ -6,34 +6,34 @@
     <div class="spells">
         <h3>Spells</h3>
         <ul class="spellsList">
-            <li class="spell"><img src="./src/assets/spells/cold snap.png" alt="">
+            <li class="spell"><img src="../assets/spells/cold snap.png" alt="">
                 <p>Cold Snap - Q Q Q</p>
             </li>
-            <li class="spell"><img src="./src/assets/spells/ghos walk.png" alt="">
+            <li class="spell"><img src="../assets/spells/ghos walk.png" alt="">
                 <p>Ghost Walk - Q Q W</p>
             </li>
-            <li class="spell"><img src="./src/assets/spells/ice wall.png" alt="">
+            <li class="spell"><img src="../assets/spells/ice wall.png" alt="">
                 <p>Ice Wall - Q Q E</p>
             </li>
-            <li class="spell"><img src="./src/assets/spells/EMP.png" alt="">
+            <li class="spell"><img src="../assets/spells/EMP.png" alt="">
                 <p>EMP - W W W</p>
             </li>
-            <li class="spell"><img src="./src/assets/spells/tornado.png" alt="">
+            <li class="spell"><img src="../assets/spells/tornado.png" alt="">
                 <p>Tornado - W W Q</p>
             </li>
-            <li class="spell"><img src="./src/assets/spells/alacrity.png" alt="">
+            <li class="spell"><img src="../assets/spells/alacrity.png" alt="">
                 <p>Alacrity - W W E</p>
             </li>
-            <li class="spell"><img src="./src/assets/spells/sun strike.png" alt="">
+            <li class="spell"><img src="../assets/spells/sun strike.png" alt="">
                 <p>Sun Strike - E E E</p>
             </li>
-            <li class="spell"><img src="./src/assets/spells/forge spirit.png" alt="">
+            <li class="spell"><img src="../assets/spells/forge spirit.png" alt="">
                 <p>Forge Spirit - E E Q</p>
             </li>
-            <li class="spell"><img src="./src/assets/spells/meteor.png" alt="">
+            <li class="spell"><img src="../assets/spells/meteor.png" alt="">
                 <p>Chaos Meteor - E E W</p>
             </li>
-            <li class="lust"><img src="./src/assets/spells/Deafening Blast.png" alt="">
+            <li class="lust"><img src="../assets/spells/Deafening Blast.png" alt="">
                 <p>Deafening Blast - Q W E</p>
             </li>
         </ul>
