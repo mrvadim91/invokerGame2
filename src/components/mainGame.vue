@@ -1,6 +1,7 @@
 <script >
 let interval;
 import { spellsData } from './spellsData.js';
+import { keyBindsArr } from './controlls.vue';
 export default {
     data() {
         return {
@@ -18,6 +19,11 @@ export default {
             colb1: "",
             colb2: "",
             colb3: "",
+            q: 'Q',
+            w: 'W',
+            e: 'E',
+            r: 'R',
+            keyBinds: keyBindsArr,
             spells: [...spellsData]
 
         }
@@ -82,7 +88,7 @@ export default {
         },
         registrateClick(pressedKey) {
             if (this.isGameStarted) {
-                if (pressedKey === 82 && this.colbs[2] != '') {
+                if (pressedKey === this.keyBinds[3] && this.colbs[2] != '') {
                     console.log("before cheking combination");
                     this.checkCombination()
                 }
@@ -102,13 +108,13 @@ export default {
             let e = 0;
 
             this.colbs.forEach(element => {
-                if (element === 81) {
+                if (element === this.keyBinds[0]) {
                     q++
                 }
-                else if (element === 87) {
+                else if (element === this.keyBinds[1]) {
                     w++
                 }
-                else if (element === 69) {
+                else if (element === this.keyBinds[2]) {
                     e++
                 }
             });
@@ -130,20 +136,24 @@ export default {
             this.changeImageInColbs()
         },
         onKeyPressed(event) {
+            console.log(event.keyCode);
             let key = event.keyCode
-            if (this.isGameStarted || key === 82 || key === 81 || key === 87 || key === 69) {
-                this.registrateClick(key)
+            if (this.isGameStarted) {
+                if (key === this.keyBinds[3] || key === this.keyBinds[0] || key === this.keyBinds[1] || key === this.keyBinds[2]) {
+                    console.log("if in key pressed worked");
+                    this.registrateClick(key)
+                }
             }
         },
         changeImageInColbs() {
             switch (this.colbs[0]) {
-                case 81:
+                case this.keyBinds[0]:
                     this.colb1 = "https://invoker-game.com/static/media/invoker_quas.5750837f318a07971a3f.png"
                     break;
-                case 87:
+                case this.keyBinds[1]:
                     this.colb1 = "https://invoker-game.com/static/media/invoker_wex.baabeddb7150b37f5752.png"
                     break;
-                case 69:
+                case this.keyBinds[2]:
                     this.colb1 = "https://invoker-game.com/static/media/invoker_exort.a56f53208bb284a9d01c.png"
                     break;
                 case '':
@@ -151,13 +161,13 @@ export default {
                     break;
             }
             switch (this.colbs[1]) {
-                case 81:
+                case this.keyBinds[0]:
                     this.colb2 = "https://invoker-game.com/static/media/invoker_quas.5750837f318a07971a3f.png"
                     break;
-                case 87:
+                case this.keyBinds[1]:
                     this.colb2 = "https://invoker-game.com/static/media/invoker_wex.baabeddb7150b37f5752.png"
                     break;
-                case 69:
+                case this.keyBinds[2]:
                     this.colb2 = "https://invoker-game.com/static/media/invoker_exort.a56f53208bb284a9d01c.png"
                     break;
                 case '':
@@ -165,13 +175,13 @@ export default {
                     break;
             }
             switch (this.colbs[2]) {
-                case 81:
+                case this.keyBinds[0]:
                     this.colb3 = "https://invoker-game.com/static/media/invoker_quas.5750837f318a07971a3f.png"
                     break;
-                case 87:
+                case this.keyBinds[1]:
                     this.colb3 = "https://invoker-game.com/static/media/invoker_wex.baabeddb7150b37f5752.png"
                     break;
-                case 69:
+                case this.keyBinds[2]:
                     this.colb3 = "https://invoker-game.com/static/media/invoker_exort.a56f53208bb284a9d01c.png"
                     break;
                 case '':
@@ -188,6 +198,13 @@ export default {
         // Удаляем обработчик событий при размонтировании компонента
         window.removeEventListener('keydown', this.onKeyPressed);
     },
+    watch: {
+    'keyBinds[0]': {
+        handler(newVal, oldVal) {
+        
+      },
+    }
+  },
 }
 </script>
 
@@ -229,17 +246,17 @@ export default {
             <li><img :src="colb1" alt=""></li>
         </ul>
         <ul class="skillsList" v-if="b != 2">
-            <li class="skill" @click="registrateClick(81)"><img
+            <li class="skill" @click="registrateClick(keyBinds[0])"><img
                     src="https://invoker-game.com/static/media/invoker_quas.5750837f318a07971a3f.png" alt="">
-                <span>Q</span>
+                <span>{{String.fromCharCode(keyBinds[0])}}</span>
             </li>
-            <li class="skill" @click="registrateClick(87)"><img
+            <li class="skill" @click="registrateClick(keyBinds[1])"><img
                     src="https://invoker-game.com/static/media/invoker_wex.baabeddb7150b37f5752.png" alt="">
-                <span>W</span>
+                <span>{{String.fromCharCode(keyBinds[1])}}</span>
             </li>
-            <li class="skill" @click="registrateClick(69)"><img
+            <li class="skill" @click="registrateClick(keyBinds[2])"><img
                     src="https://invoker-game.com/static/media/invoker_exort.a56f53208bb284a9d01c.png" alt="">
-                <span>E</span>
+                <span>{{String.fromCharCode(keyBinds[2])}}</span>
             </li>
             <li class="skill"><img src="https://invoker-game.com/static/media/no_spell.5ac56c73ca6cbf3b9ac0.png" alt="">
                 <span>D</span>
@@ -247,9 +264,9 @@ export default {
             <li class="skill"><img src="https://invoker-game.com/static/media/no_spell.5ac56c73ca6cbf3b9ac0.png" alt="">
                 <span>F</span>
             </li>
-            <li class="skill" @click="registrateClick(82)"><img
+            <li class="skill" @click="registrateClick(keyBinds[3])"><img
                     src="https://invoker-game.com/static/media/invoker_invoke.a06dc8565470549cac5f.png" alt="">
-                <span>R</span>
+                <span>{{String.fromCharCode(keyBinds[3])}}</span>
             </li>
         </ul>
     </div>
